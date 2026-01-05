@@ -4,149 +4,167 @@ title: 📚 程式課程學習中心
 ---
 
 <style>
-    /* 整體背景優化 */
-    :root {
-        --primary-color: #4facfe;
-        --secondary-color: #00f2fe;
-        --text-dark: #2d3436;
-        --text-light: #636e72;
+    /* 全域背景設定：使用深藍與深紫的漸層，營造科技感 */
+    body {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #e0e0e0;
+        min-height: 100vh;
     }
 
-    /* 標題與引言 */
+    /* 標題區域 */
     .hero-section {
         text-align: center;
-        padding: 40px 0;
+        padding: 60px 20px;
     }
     .hero-section h1 {
-        font-size: 2.5rem;
-        background: linear-gradient(to right, #007bff, #00c6ff);
+        font-size: 3rem;
+        font-weight: 800;
+        background: linear-gradient(to right, #4facfe, #00f2fe, #a8edea);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+    }
+    .hero-section p {
+        color: #94a3b8;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
     }
 
-    /* 卡片容器佈局 */
+    /* 卡片容器 */
     .card-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 25px;
-        margin-top: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto 50px auto;
+        padding: 0 20px;
     }
 
-    /* 現代感卡片設計 */
+    /* 磨砂玻璃卡片效果 */
     .card {
-        background: #ffffff;
-        border-radius: 20px;
-        padding: 35px 25px;
+        background: rgba(255, 255, 255, 0.05); /* 半透明背景 */
+        backdrop-filter: blur(10px); /* 模糊背後內容 */
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        padding: 40px 30px;
         text-align: center;
         text-decoration: none !important;
-        color: var(--text-dark) !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        border: 1px solid rgba(0, 0, 0, 0.03);
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        position: relative;
-        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0, 123, 255, 0.15);
-        border-color: rgba(0, 123, 255, 0.2);
+        transform: translateY(-15px) scale(1.02);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(79, 172, 254, 0.5);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
     }
 
-    /* 圖示放大效果 */
-    .card .icon {
-        font-size: 3.5rem;
-        margin-bottom: 15px;
-        display: block;
-        transition: transform 0.3s ease;
-    }
-    .card:hover .icon {
-        transform: scale(1.15);
+    /* 圖示與文字 */
+    .icon-box {
+        width: 80px;
+        height: 80px;
+        background: rgba(79, 172, 254, 0.1);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
     }
 
     .card h2 {
-        font-size: 1.5rem;
-        margin-top: 0;
-        margin-bottom: 12px;
-        color: #333;
+        color: #fff;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
     }
 
     .card p {
+        color: #cbd5e1;
         font-size: 0.95rem;
-        color: var(--text-light);
         line-height: 1.6;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
+        flex-grow: 1;
     }
 
-    /* 質感按鈕 */
+    /* 按鈕樣式 */
     .btn-start {
-        display: inline-block;
-        padding: 10px 30px;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        width: 100%;
+        padding: 12px 0;
+        background: linear-gradient(135deg, #007bff 0%, #00d2ff 100%);
         color: white !important;
-        border-radius: 50px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        transition: opacity 0.2s;
-        box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
-    }
-
-    .btn-start:hover {
-        opacity: 0.9;
+        border-radius: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
     }
 
     /* 更新日誌區塊 */
     .update-log {
-        margin-top: 50px;
-        padding: 25px;
-        background: #f8f9fa;
-        border-radius: 15px;
-        border-left: 5px solid #007bff;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        border: 1px dashed rgba(255, 255, 255, 0.1);
     }
     .update-log h3 {
-        margin-top: 0;
+        color: #4facfe;
+        margin-bottom: 20px;
         font-size: 1.2rem;
-        display: flex;
-        align-items: center;
     }
     .update-item {
-        font-size: 0.9rem;
-        margin-bottom: 8px;
         list-style: none;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 0.9rem;
     }
     .update-date {
-        font-weight: bold;
-        color: #007bff;
-        margin-right: 10px;
+        display: inline-block;
+        background: rgba(79, 172, 254, 0.2);
+        color: #4facfe;
+        padding: 2px 10px;
+        border-radius: 6px;
+        margin-right: 15px;
+        font-family: monospace;
     }
 </style>
 
 <div class="hero-section">
-    <h1>歡迎來到我的線上講義</h1>
-    <p>提升專業技能，掌握未來關鍵技術</p>
+    <h1>程式課程學習中心</h1>
+    <p>探索科學計算與人工智慧的無限可能</p>
 </div>
 
 <div class="card-container">
     <a href="./matlab/ch01" class="card">
-        <span class="icon">📊</span>
-        <h2>MATLAB 基礎</h2>
-        <p>矩陣運算、數據繪圖與科學計算基礎，打造紮實的數據分析力。</p>
-        <span class="btn-start">開始探索</span>
+        <div class="icon-box">📊</div>
+        <h2>MATLAB 核心</h2>
+        <p>掌握矩陣運算的靈魂，從基礎語法到進階數據可視化，建立紮實的科學計算能力。</p>
+        <span class="btn-start">進入課程</span>
     </a>
 
     <a href="./ai/ch01" class="card">
-        <span class="icon">🤖</span>
+        <div class="icon-box">🤖</div>
         <h2>AI 深度學習</h2>
-        <p>從機器學習導論到神經網路實作，一步步進入 AI 的核心領域。</p>
-        <span class="btn-start">立即學習</span>
+        <p>解密神經網路黑盒子，學習機器學習模型建構，親手打造屬於自己的 AI 應用。</p>
+        <span class="btn-start">進入課程</span>
     </a>
 </div>
 
 <div class="update-log">
-    <h3>📢 最新更新公告</h3>
+    <h3>📢 最近更新</h3>
     <ul>
-        <li class="update-item"><span class="update-date">2025-12-28</span> 新增 AI 課程第二章「神經網路」實作內容。</li>
-        <li class="update-item"><span class="update-date">2025-12-28</span> 優化 MATLAB 側邊欄導覽，修復失效連結。</li>
+        <li class="update-item">
+            <span class="update-date">2025.12.28</span> 
+            發布 AI 課程第二章：神經網路架構與反向傳播
+        </li>
+        <li class="update-item">
+            <span class="update-date">2025.12.28</span> 
+            MATLAB 單元新增「圖像處理」範例代碼
+        </li>
     </ul>
 </div>
