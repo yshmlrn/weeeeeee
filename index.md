@@ -153,6 +153,14 @@ title: 📚 程式課程學習中心
         <p>解密神經網路黑盒子，學習機器學習模型建構，親手打造屬於自己的 AI 應用。</p>
         <span class="btn-start">進入課程</span>
     </a>
+
+    <a href="./c++/ch01" class="card">
+        <div class="icon-box">🤖</div>
+        <h2>c++</h2>
+        <p>程式喔耶喔耶。</p>
+        <span class="btn-start">進入課程</span>
+    </a>
+    
 </div>
 
 <div class="update-log">
