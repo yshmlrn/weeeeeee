@@ -8,3 +8,6 @@ collections:
   ai:
     output: true
     permalink: /ai/:name
+  c++:
+    output: true
+    permalink: /c++/:name
