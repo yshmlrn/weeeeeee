@@ -11,3 +11,6 @@ collections:
   c++:
     output: true
     permalink: /c++/:name
+  midtern:
+    output: true
+    permalink: /midtern/:name
