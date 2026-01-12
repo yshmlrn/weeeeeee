@@ -160,6 +160,13 @@ title: 📚 程式課程學習中心
         <p>程式喔耶喔耶。</p>
         <span class="btn-start">進入課程</span>
     </a>
+
+    <a href="./midtern/midternproject" class="card">
+        <div class="icon-box">🤖</div>
+        <h2>期中報告</h2>
+        <p>讚讚。</p>
+        <span class="btn-start">進入課程</span>
+    </a>
     
 </div>
 
