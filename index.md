@@ -156,7 +156,7 @@ title: 📚 程式課程學習中心
 
     <a href="./c++/ch01" class="card">
         <div class="icon-box">🤖</div>
-        <h2>c++</h2>
+        <h2>C++</h2>
         <p>程式喔耶喔耶。</p>
         <span class="btn-start">進入課程</span>
     </a>
