@@ -11,6 +11,6 @@ collections:
   c++:
     output: true
     permalink: /c++/:name
-  midtern:
+  project:
     output: true
-    permalink: /midtern/:name
+    permalink: /project/:name
