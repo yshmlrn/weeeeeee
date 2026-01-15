@@ -161,10 +161,10 @@ title: 📚 程式課程學習中心
         <span class="btn-start">進入課程</span>
     </a>
 
-    <a href="./midtern/midternproject" class="card">
+    <a href="./project/midternproject" class="card">
         <div class="icon-box">🤖</div>
-        <h2>期中報告</h2>
-        <p>讚讚。</p>
+        <h2>報告</h2>
+        <p>此分頁中包含了學習MATLAB的課程內容和實作運用。</p>
         <span class="btn-start">進入課程</span>
     </a>
     
