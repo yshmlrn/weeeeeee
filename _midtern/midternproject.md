@@ -44,7 +44,6 @@ waterfall(X, Y, Z);
 xlabel('x');     ylabel('y');     zlabel('z');
 grid on;      title('Waterfall Plot');     axis tight;
 ```
-![說明](./images/mid_1-1.png)
 
 2. 使用surf、shading flat、shading interp、surfc語法繪製peaks圖形
 ```matlab
